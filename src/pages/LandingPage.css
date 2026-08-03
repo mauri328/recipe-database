@@ -1,0 +1,78 @@
+.landing-hero {
+  text-align: center;
+  padding: 96px 24px 72px;
+}
+
+.landing-hero h1 {
+  font-family: var(--heading);
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--text-h);
+  margin: 0 0 20px;
+}
+
+.landing-subtitle {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--text);
+}
+
+.landing-cta {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.landing-cta:hover {
+  opacity: 0.9;
+}
+
+.landing-features {
+  display: flex;
+  gap: 24px;
+  padding: 0 24px 96px;
+  border-top: 1px solid var(--border);
+  padding-top: 48px;
+}
+
+.landing-feature {
+  flex: 1;
+  text-align: left;
+}
+
+.landing-feature h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.landing-feature p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 145%;
+}
+
+@media (max-width: 1024px) {
+  .landing-hero {
+    padding: 56px 20px 48px;
+  }
+  .landing-hero h1 {
+    font-size: 30px;
+  }
+  .landing-features {
+    flex-direction: column;
+    text-align: center;
+  }
+  .landing-feature {
+    text-align: center;
+  }
+}

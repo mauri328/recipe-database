@@ -14,7 +14,6 @@ import {
   persistentMultipleTabManager,
 } from "firebase/firestore";
 
-// Reuse your existing config from recipedb_auth.js
 const firebaseConfig = {
   apiKey: "AIzaSyDX2KHfHmq2rzHpYYgV_iHB379W3HFUm0o",
   authDomain: "recipedb-5f3c3.firebaseapp.com",

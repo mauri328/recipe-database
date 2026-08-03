@@ -1,9 +1,13 @@
 import { useEffect } from "react";
 import { useAuthStore } from "./store/useAuthStore";
 import { useRecipeStore } from "./store/useRecipeStore";
+import Header from "./components/Header";
+import LandingPage from "./pages/LandingPage";
+import Menu from "./components/Menu";
+
 
 export default function App() {
-  const { user, authReady, login, logout } = useAuthStore();
+  const { user, authReady } = useAuthStore();
   const { recipes, loading, subscribeToUserRecipes } = useRecipeStore();
 
   useEffect(() => {
@@ -12,23 +16,13 @@ export default function App() {
 
   if (!authReady) return <p>Loading...</p>;
 
-  if (!user) {
-    return (
-      <div>
-        <p>Please log in.</p>
-        <button onClick={login}>Sign in with Google</button>
-      </div>
-    );
-  }
-
   return (
-    <div>
-      <header>
-        <span>{user.displayName}</span>
-        <button onClick={logout}>Log out</button>
-      </header>
+    <>
+      <Header onOpenSettings={() => console.log("open settings — TODO")} />
 
-      {loading ? (
+      {!user ? (
+        <LandingPage />
+      ) : loading ? (
         <p>Loading recipes...</p>
       ) : (
         <ul>
@@ -37,6 +31,6 @@ export default function App() {
           ))}
         </ul>
       )}
-    </div>
+    </>
   );
 }
