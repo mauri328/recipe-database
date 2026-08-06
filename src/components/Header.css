@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 16px 24px;
   border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
 .app-header-brand {
@@ -26,14 +27,10 @@
 }
 
 .app-header-actions {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.app-header-user {
-  font-size: 15px;
-  color: var(--text);
 }
 
 .app-header-button {
@@ -62,18 +59,18 @@
   opacity: 0.9;
 }
 
-.app-header-icon-button {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text-h);
-  cursor: pointer;
-  font-size: 15px;
-  transition: border-color 0.2s;
+.app-header-settings-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.app-header-icon-button:hover {
-  border-color: var(--accent-border);
+/* icon-only on narrow / mobile screens */
+@media (max-width: 640px) {
+  .app-header-settings-label {
+    display: none;
+  }
+  .app-header-settings-trigger {
+    padding: 8px 10px;
+  }
 }

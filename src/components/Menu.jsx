@@ -6,20 +6,22 @@ export default function Menu({ onClose }) {
 
   return (
     <div className="menu">
-      <button className="menu-item">App settings</button>
-      <button className="menu-item">Account settings</button>
-
-      <div className="menu-separator"></div>
-
       <div className="menu-user">
         Logged in as <strong>{user.displayName}</strong>
       </div>
+
+      <div className="menu-separator"></div>
+
+      <button className="menu-item">App settings</button>
+      <button className="menu-item">Account settings</button>
+      
+      <div className="menu-separator"></div>
 
       <button
         className="menu-item menu-logout"
         onClick={logout}
       >
-        Log out
+        Sign out
       </button>
     </div>
   );

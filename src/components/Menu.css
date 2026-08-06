@@ -37,7 +37,8 @@
   .menu-user {
     font-size: 14px;
     color: var(--text);
-    padding: 4px 0;
+    padding: 8px 10px;
+    text-align: left;
   }
 
   .menu-logout {
@@ -45,5 +46,3 @@
     font-weight: 600;
   }
 }
-
-
