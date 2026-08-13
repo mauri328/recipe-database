@@ -1,7 +1,7 @@
 .menu {
   position: absolute;
-  top: 70px;
-  right: 24px;
+  top: 50px;
+  right: 0px;
   width: 220px;
   background: var(--bg);
   border: 1px solid var(--border);
@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 100;
 
   .menu-item {
     display: flex;
@@ -25,6 +26,7 @@
     border: none;
     color: var(--text-h);
     cursor: pointer;
+    text-decoration: none;
   }
 
   .menu-item:hover {

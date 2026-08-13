@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import { Settings, User, LogOut } from "lucide-react";
 import "./Menu.css";
@@ -13,12 +14,13 @@ export default function Menu({ onClose }) {
 
       <div className="menu-separator"></div>
 
-      <button className="menu-item">
-        <Settings size={16} /> App settings
-      </button>
-      <button className="menu-item">
-        <User size={16} /> Account settings
-      </button>
+      <Link to="/settings/app" className="menu-item" onClick={onClose}>
+        <Settings size={16} /> App Settings
+      </Link>
+  
+      <Link to="/settings/account" className="menu-item" onClick={onClose}>
+        <User size={16} /> Account Settings
+      </Link>
 
       <div className="menu-separator"></div>
 
